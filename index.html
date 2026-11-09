@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio digital — Test inicial">
+    <title>~/portfolio — Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+    <main class="container">
+        <div class="terminal">
+            <div class="terminal__bar">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+                <span class="terminal__title">visitor@portfolio: ~ — bash</span>
+            </div>
+
+            <div class="terminal__body">
+                <p class="line">
+                    <span class="prompt">visitor@portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span> whoami
+                </p>
+                <h1 class="name">Mi portafolio</h1>
+
+                <p class="line">
+                    <span class="prompt">visitor@portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span> cat estado.txt
+                </p>
+                <p class="status">
+                    <span id="typedText"></span><span class="cursor">▊</span>
+                </p>
+
+                <p class="line">
+                    <span class="prompt">visitor@portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span> ./test.sh
+                </p>
+                <button class="btn" id="testBtn">Ejecutar test</button>
+                <p class="output" id="output"></p>
+
+                <p class="joke">// Primera versión. Si funciona, no lo toquéis. 😉</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 · Test inicial · <a href="https://github.com/nizatf/el-meu-portfolio">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

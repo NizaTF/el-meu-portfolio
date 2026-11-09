@@ -1,0 +1,185 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === VARIABLES === */
+:root {
+    --bg: #0d1117;
+    --bg-panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --green: #00ff88;
+    --green-dim: #00b85f;
+    --red: #ff5f56;
+    --yellow: #ffbd2e;
+    --green-mac: #27c93f;
+    --font-mono: 'Courier New', 'Consolas', monospace;
+}
+
+/* === BASE === */
+body {
+    font-family: var(--font-mono);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === CONTAINER === */
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* === TERMINAL === */
+.terminal {
+    width: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+.terminal__bar {
+    background: #21262d;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot--red { background: var(--red); }
+.dot--yellow { background: var(--yellow); }
+.dot--green { background: var(--green-mac); }
+
+.terminal__title {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #8b949e;
+}
+
+.terminal__body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* === LÍNEAS DE TERMINAL === */
+.line {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.prompt { color: var(--green); }
+.sep { color: #8b949e; }
+.path { color: var(--green-dim); }
+
+/* === NOMBRE === */
+.name {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: var(--green);
+    margin: 0.5rem 0;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+/* === STATUS === */
+.status {
+    color: var(--green);
+    font-size: 1rem;
+    min-height: 1.5em;
+    white-space: pre-line;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--green);
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* === BOTÓN === */
+.btn {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    background: transparent;
+    color: var(--green);
+    border: 1px solid var(--green);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.btn:hover {
+    background: var(--green);
+    color: var(--bg);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+/* === OUTPUT === */
+.output {
+    color: var(--yellow);
+    font-size: 0.9rem;
+    min-height: 1.5em;
+    margin-top: 0.5rem;
+}
+
+/* === CHISTE === */
+.joke {
+    color: #6e7681;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+}
+
+/* === FOOTER === */
+.footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6e7681;
+    margin-top: 2rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 500px) {
+    body { padding: 1rem 0.5rem; }
+    .terminal__body { padding: 1rem; }
+    .line { font-size: 0.8rem; }
+}
