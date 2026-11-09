@@ -37,18 +37,18 @@ const WAVES = [
     { section: 5, cols: 4, rows: 4, speed: 1.8, fireRate: 0.022 },
 ];
 
-/* ---------- SECCIONES (con colores suaves por sección) ---------- */
+/* ---------- SECCIONES CON TUS DATOS REALES ---------- */
 const SECTIONS = [
     {
         id: 'sobre-mi', title: 'Sobre mí', icon: '👤',
         accent: '#ff8b6b', accentLight: '#fff5f0', accentBorder: 'rgba(255, 139, 107, 0.22)',
         content: `
             <div style="text-align:center;font-size:3rem;margin-bottom:.5rem;">🧑‍💻</div>
-            <p>¡Hola! Soy <strong>[TU NOMBRE]</strong>, estudiante del ciclo de <strong>Sistemas Microinformáticos y Redes (SMX)</strong>.</p>
-            <p>Me encanta resolver problemas, aprender cosas nuevas y hacer que las cosas funcionen. Si no funcionan... reinicio y rezo un poco. Técnica milenaria.</p>
+            <p>¡Hola! Soy <strong>Nico Talens Fresquet</strong>, estudiante del Grado Medio de <strong>Sistemas Microinformáticos y Redes (SMX)</strong>.</p>
+            <p>Me interesa todo lo relacionado con la informática: desde montar un equipo pieza a pieza hasta configurar una red local o crear proyectos open source. Durante el ciclo he aprendido a trabajar con hardware, instalar y administrar sistemas operativos (Windows y Linux), montar redes locales y aplicar medidas básicas de seguridad.</p>
             <h2>🎯 Objetivos</h2>
-            <p>Convertirme en <strong>SysAdmin</strong> o <strong>Desarrollador Full-Stack</strong>.</p>
-            <blockquote>"No soy vago, estoy en modo ahorro de energía."</blockquote>
+            <p>Tras finalizar SMX, mi objetivo es estudiar <strong>DAM y DAW</strong> conjuntamente, y luego dar el salto al mundo laboral en soporte técnico, administración de sistemas o redes, sin dejar de aprender y de construir proyectos propios.</p>
+            <blockquote>"Me considero una persona curiosa, constante y con ganas de aprender. Disfruto resolviendo problemas técnicos y entendiendo cómo funcionan las cosas por dentro."</blockquote>
         `,
     },
     {
@@ -56,12 +56,12 @@ const SECTIONS = [
         accent: '#4a9eff', accentLight: '#eff6ff', accentBorder: 'rgba(74, 158, 255, 0.22)',
         content: `
             <h2>🎓 CFGM Sistemas Microinformáticos y Redes</h2>
-            <p><strong>IES [NOMBRE INSTITUTO]</strong> · 2024 → actualidad</p>
-            <p>Sistemas operativos, redes, hardware y desarrollo web.</p>
-            <h2>🌐 Curso de HTML, CSS y JavaScript</h2>
-            <p><strong>Plataforma online</strong> · 2024</p>
-            <h2>🐙 Curso de Git y GitHub</h2>
-            <p><strong>Plataforma online</strong> · 2024</p>
+            <p><strong>2025 — 2026</strong> · Primer año de SMX</p>
+            <p>Montaje y mantenimiento de equipos, sistemas operativos monopuesto, redes locales y aplicaciones ofimáticas. <strong>Media: 8</strong>.</p>
+            <h2>📅 2026 — 2027 · Segundo año de SMX</h2>
+            <p>Último tramo del ciclo. Módulos de hardware, sistemas operativos, redes locales, seguridad y ofimática. Afrontando la recta final con las <strong>prácticas</strong> y el <strong>proyecto de síntesis</strong>.</p>
+            <h2>🚀 Próximamente: DAM y DAW</h2>
+            <p>Tras finalizar el ciclo, mi objetivo es estudiar <strong>DAM y DAW</strong> conjuntamente para dar el salto al mundo laboral.</p>
             <blockquote>Siempre aprendiendo. Stack Overflow es mi segundo hogar.</blockquote>
         `,
     },
@@ -69,15 +69,25 @@ const SECTIONS = [
         id: 'habilidades', title: 'Habilidades', icon: '⚔️',
         accent: '#9b7bff', accentLight: '#f5f1ff', accentBorder: 'rgba(155, 123, 255, 0.22)',
         content: `
-            <h2>⚔️ Stack técnico</h2>
-            <div class="skill-row"><span class="skill-row__name">HTML5</span><div class="skill-row__bar" style="--fill:85%"></div><span class="skill-row__pct">85%</span></div>
-            <div class="skill-row"><span class="skill-row__name">CSS3</span><div class="skill-row__bar" style="--fill:80%"></div><span class="skill-row__pct">80%</span></div>
-            <div class="skill-row"><span class="skill-row__name">JavaScript</span><div class="skill-row__bar" style="--fill:65%"></div><span class="skill-row__pct">65%</span></div>
-            <div class="skill-row"><span class="skill-row__name">Linux</span><div class="skill-row__bar" style="--fill:70%"></div><span class="skill-row__pct">70%</span></div>
-            <div class="skill-row"><span class="skill-row__name">Git</span><div class="skill-row__bar" style="--fill:75%"></div><span class="skill-row__pct">75%</span></div>
-            <div class="skill-row"><span class="skill-row__name">Debugging</span><div class="skill-row__bar" style="--fill:90%"></div><span class="skill-row__pct">90%</span></div>
-            <div class="skill-row"><span class="skill-row__name">Docker</span><div class="skill-row__bar" style="--fill:40%"></div><span class="skill-row__pct">40%</span></div>
-            <blockquote>// El porcentaje de Debugging sube si me dejas el móvil 5 minutos.</blockquote>
+            <h2>🌐 Idiomas</h2>
+            <ul>
+                <li>🇪🇸 <strong>Español</strong> — Nativo (C2)</li>
+                <li>🏴 <strong>Valenciano</strong> — Nativo (C2)</li>
+                <li>🇬🇧 <strong>Inglés</strong> — B2 (EOI)</li>
+            </ul>
+            <h2>⚙️ Áreas técnicas</h2>
+            <h3>🔧 Hardware y Ofimática</h3>
+            <p>Montaje de equipos, diagnóstico y mantenimiento. Word / Excel / LibreOffice.</p>
+            <h3>💻 Sistemas y Virtualización</h3>
+            <p>Windows 10/11/Server, Ubuntu (Desktop/Server), Kali Linux, Active Directory, Terminal/Scripting Bash, SSH, VirtualBox/VMware.</p>
+            <h3>🌐 Redes y Comunicaciones</h3>
+            <p>TCP/IP, DHCP, DNS, cableado estructurado, routers/switches/APs, Cisco Packet Tracer, GNS3.</p>
+            <h3>🔒 Ciberseguridad</h3>
+            <p>Firewalls/antivirus, copias de seguridad, hacking ético/pentesting, Wireshark, VPN/túneles seguros.</p>
+            <h3>🌍 Desarrollo Web</h3>
+            <p>HTML5, CSS3, JavaScript, Git (control de versiones).</p>
+            <h3>♻️ Transversales</h3>
+            <p>Gestión de proyectos, sostenibilidad, digitalización, inglés técnico.</p>
         `,
     },
     {
@@ -85,30 +95,31 @@ const SECTIONS = [
         accent: '#ff9f43', accentLight: '#fff8ef', accentBorder: 'rgba(255, 159, 67, 0.22)',
         content: `
             <h2>🎨 Proyectos</h2>
+            <h3>📦 Proyecto Intermodular SMX</h3>
+            <p>El proyecto final del ciclo de SMX. Una integración de todos los conocimientos de hardware, redes y sistemas.</p>
+            <p><strong>Estado:</strong> En fase de planificación y organización.</p>
+            <p><strong>Stack:</strong> Hardware, Redes, Sistemas Operativos.</p>
+            <hr style="border:none;border-top:1px solid #eee;margin:1rem 0;">
             <h3>🎮 Debug Rush (esta web)</h3>
-            <p>Portafolio convertido en Space Invaders con enemigos ASCII y tarjetas de sección.</p>
-            <p><strong>Stack:</strong> HTML + CSS + JavaScript vanilla</p>
-            <h3>🧮 Calculadora web</h3>
-            <p>Calculadora funcional en JavaScript. Suma, resta, multiplica y divide... mayormente.</p>
-            <p><strong>Stack:</strong> JavaScript · CSS</p>
-            <h3>✅ To-Do List</h3>
-            <p>Gestor de tareas con LocalStorage. Nunca la uso porque me recuerda todo lo pendiente.</p>
-            <p><strong>Stack:</strong> JavaScript · LocalStorage</p>
+            <p>Portafolio convertido en un juego estilo Space Invaders con enemigos ASCII y tarjetas de sección.</p>
+            <p><strong>Stack:</strong> HTML + CSS + JavaScript vanilla.</p>
+            <h3>🌐 Portafolio personal</h3>
+            <p>Sitio web estático con tema claro/oscuro, navegación entre páginas y diseño responsive.</p>
+            <p><strong>Stack:</strong> HTML, CSS, JavaScript.</p>
         `,
     },
     {
         id: 'experiencia', title: 'Experiencia', icon: '💼',
         accent: '#ff6b9d', accentLight: '#fff0f5', accentBorder: 'rgba(255, 107, 157, 0.22)',
         content: `
-            <h2>💼 Experiencia</h2>
-            <h3>Prácticas en empresa</h3>
-            <p><strong>[NOMBRE EMPRESA]</strong> · 2025</p>
-            <p>Soporte técnico y mantenimiento. <em>"¿Has probado a apagarlo y encenderlo?"</em></p>
-            <h3>Proyecto en equipo: web del centro</h3>
-            <p><strong>IES [NOMBRE INSTITUTO]</strong> · 2024</p>
-            <h3>Voluntariado TIC</h3>
-            <p><strong>Centro cívico</strong> · 2024</p>
-            <p>Enseñando a mayores a usar ordenadores. Aprendí más paciencia que en toda la ESO.</p>
+            <h2>💼 Experiencia y actividades</h2>
+            <h3>🔍 En búsqueda de prácticas</h3>
+            <p>Actualmente <strong>disponible para prácticas</strong>, preferiblemente en el extranjero. Interesado en soporte técnico, administración de sistemas o redes.</p>
+            <h3>🛠️ Proyectos personales</h3>
+            <p>Construyendo proyectos propios para afianzar conocimientos de desarrollo web y sistemas.</p>
+            <h3>📚 Formación continua</h3>
+            <p>Aprendiendo HTML y CSS de forma autodidacta, complementando la formación reglada del ciclo.</p>
+            <blockquote>"Siempre abierto a nuevas oportunidades para aprender y crecer profesionalmente."</blockquote>
         `,
     },
     {
@@ -116,13 +127,13 @@ const SECTIONS = [
         accent: '#4ecdc4', accentLight: '#f0fdfc', accentBorder: 'rgba(78, 205, 196, 0.22)',
         content: `
             <h2>📬 Contacto</h2>
-            <p>¿Hablamos? Estos son mis canales:</p>
+            <p>¿Prácticas, colaboración o simplemente saludar? Mi bandeja está abierta.</p>
             <ul>
-                <li>📧 <strong>Email:</strong> <a href="mailto:tu@email.com">tu@email.com</a></li>
-                <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/nizatf" target="_blank" rel="noopener">github.com/nizatf</a></li>
-                <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener">linkedin.com/in/tu-perfil</a></li>
+                <li>📧 <strong>Email:</strong> <a href="mailto:nicotalensfresquet@gmail.com">nicotalensfresquet@gmail.com</a></li>
+                <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NizaTF" target="_blank" rel="noopener">github.com/NizaTF</a></li>
+                <li>🌐 <strong>Web:</strong> <a href="https://nizatf.github.io" target="_blank" rel="noopener">nizatf.github.io</a></li>
             </ul>
-            <blockquote>Respondo más rápido que un ping a localhost. (A menos que esté en un merge conflict.)</blockquote>
+            <blockquote>Respondo lo antes posible. ¡Hablemos!</blockquote>
         `,
     },
 ];
@@ -188,7 +199,6 @@ const endPanel       = $('endPanel');
 const rand = (min, max) => Math.random() * (max - min) + min;
 const randInt = (min, max) => Math.floor(rand(min, max + 1));
 
-// Bezier cúbica paramétrica
 function bezier(t, p0, p1, p2, p3) {
     const mt = 1 - t;
     const mt2 = mt * mt;
@@ -313,32 +323,24 @@ function spawnWave(waveIndex) {
             const entryPath = createEntryPath(formationX, formationY);
 
             state.enemies.push({
-                // Formación
                 formationX,
                 formationY,
-                // Posición actual
                 x: entryPath.p0.x,
                 y: entryPath.p0.y,
-                // Estado
                 phase: 'entering',
                 t: 0,
                 path: entryPath,
                 entryDelay: enemyIndex * 8,
-                // Apariencia
                 sprite: type.sprite,
                 color: type.color,
                 alive: true,
                 isCarrier: false,
-                // Wobble (balanceo en formación)
                 wobblePhase: Math.random() * Math.PI * 2,
                 wobbleAmp: rand(1, 2.5),
                 wobbleSpeed: rand(0.03, 0.06),
-                // Dive
                 diveCooldown: rand(120, 300),
-                // Return
                 startX: 0,
                 startY: 0,
-                // Trail
                 trailTimer: 0,
             });
             enemyIndex++;
@@ -353,30 +355,19 @@ function spawnWave(waveIndex) {
 }
 
 function createEntryPath(tx, ty) {
-    // Entrada desde distintos lados (arriba, izquierda, derecha)
     const side = randInt(0, 3);
     let p0;
 
     if (side === 0 || side === 3) {
-        // Desde arriba
         p0 = { x: tx + rand(-80, 80), y: -60 };
     } else if (side === 1) {
-        // Desde la izquierda
         p0 = { x: -60, y: rand(40, 180) };
     } else {
-        // Desde la derecha
         p0 = { x: W + 60, y: rand(40, 180) };
     }
 
-    // Puntos de control para crear una curva bonita tipo Galaga
-    const p1 = {
-        x: rand(-100, W + 100),
-        y: rand(-80, 100),
-    };
-    const p2 = {
-        x: tx + rand(-180, 180),
-        y: ty - rand(80, 180),
-    };
+    const p1 = { x: rand(-100, W + 100), y: rand(-80, 100) };
+    const p2 = { x: tx + rand(-180, 180), y: ty - rand(80, 180) };
     const p3 = { x: tx, y: ty };
 
     return { p0, p1, p2, p3 };
@@ -386,23 +377,9 @@ function createDivePath(enemy) {
     const p0 = { x: enemy.x, y: enemy.y };
     const side = enemy.x < W / 2 ? -1 : 1;
 
-    // Sale hacia un lado
-    const p1 = {
-        x: enemy.x + side * rand(120, 220),
-        y: enemy.y + rand(60, 140),
-    };
-
-    // Pasa cerca del jugador
-    const p2 = {
-        x: state.player.x + rand(-100, 100),
-        y: state.player.y - rand(40, 100),
-    };
-
-    // Vuelve a la formación (posición actual de la formación)
-    const p3 = {
-        x: enemy.formationX,
-        y: enemy.formationY,
-    };
+    const p1 = { x: enemy.x + side * rand(120, 220), y: enemy.y + rand(60, 140) };
+    const p2 = { x: state.player.x + rand(-100, 100), y: state.player.y - rand(40, 100) };
+    const p3 = { x: enemy.formationX, y: enemy.formationY };
 
     return { p0, p1, p2, p3 };
 }
@@ -417,7 +394,6 @@ function updateEnemies() {
     const alive = state.enemies.filter(e => e.alive);
     if (alive.length === 0) return;
 
-    // Último enemigo → portador
     if (alive.length === 1 && !alive[0].isCarrier) {
         alive[0].isCarrier = true;
         alive[0].sprite = CARRIER_SPRITE;
@@ -426,7 +402,6 @@ function updateEnemies() {
 
     state.globalDiveTimer++;
 
-    // Mover formación entera (solo enemigos en formación)
     state.moveTimer++;
     if (state.moveTimer >= state.moveInterval) {
         state.moveTimer = 0;
@@ -445,13 +420,12 @@ function updateEnemies() {
         }
     }
 
-    // Actualizar cada enemigo según su fase
     for (const e of alive) {
         e.wobblePhase += e.wobbleSpeed;
 
         if (e.phase === 'entering') {
             if (e.entryDelay > 0) { e.entryDelay--; continue; }
-            e.t += 1 / 100; // 100 frames
+            e.t += 1 / 100;
             if (e.t >= 1) {
                 e.t = 1;
                 e.phase = 'formation';
@@ -462,11 +436,9 @@ function updateEnemies() {
             e.y = pos.y;
             emitTrail(e);
         } else if (e.phase === 'formation') {
-            // Wobble suave
             e.x = e.formationX + Math.cos(e.wobblePhase) * e.wobbleAmp;
             e.y = e.formationY + Math.sin(e.wobblePhase * 1.3) * e.wobbleAmp * 0.7;
 
-            // Intentar dive
             e.diveCooldown--;
             if (e.diveCooldown <= 0 && state.globalDiveTimer > 100) {
                 const divers = alive.filter(x => x.phase === 'diving').length;
@@ -476,9 +448,8 @@ function updateEnemies() {
                 }
             }
         } else if (e.phase === 'diving') {
-            e.t += 1 / 120; // 120 frames por dive
+            e.t += 1 / 120;
             if (e.t >= 1) {
-                // Vuelta a la formación con suavizado
                 e.phase = 'returning';
                 e.t = 0;
                 e.startX = e.x;
@@ -489,7 +460,6 @@ function updateEnemies() {
                 e.y = pos.y;
                 emitTrail(e);
 
-                // Disparo durante el dive
                 if (Math.random() < 0.06 && e.t > 0.15 && e.t < 0.75) {
                     state.enemyBullets.push({
                         x: e.x,
@@ -512,7 +482,6 @@ function updateEnemies() {
         }
     }
 
-    // Disparos regulares de enemigos en formación
     const waveConfig = WAVES[state.wave];
     for (const e of alive) {
         if (e.phase === 'formation' && Math.random() < waveConfig.fireRate) {
@@ -608,7 +577,6 @@ function renderBullets() {
    ============================================================ */
 
 function checkCollisions() {
-    // Bala jugador → enemigo
     for (const b of state.bullets) {
         if (!b.alive) continue;
         for (const e of state.enemies) {
@@ -621,7 +589,6 @@ function checkCollisions() {
         }
     }
 
-    // Bala enemiga → jugador
     if (state.player.invuln <= 0) {
         for (const b of state.enemyBullets) {
             if (!b.alive) continue;
@@ -633,7 +600,6 @@ function checkCollisions() {
         }
     }
 
-    // Contacto enemigo en dive → jugador
     if (state.player.invuln <= 0) {
         for (const e of state.enemies) {
             if (!e.alive) continue;
@@ -653,7 +619,6 @@ function checkCollisions() {
 function killEnemy(enemy) {
     enemy.alive = false;
 
-    // Explosión
     for (let i = 0; i < 14; i++) {
         state.particles.push({
             x: enemy.x,
@@ -792,7 +757,7 @@ function updateComboTimer() {
 }
 
 /* ============================================================
-   13. TARJETA (nuevo estilo limpio)
+   13. TARJETA
    ============================================================ */
 
 async function triggerCard(enemy) {
@@ -854,7 +819,6 @@ function showCard(section, number, offsetX = 0, offsetY = 0, onClose) {
 
     $('cardClose').addEventListener('click', close);
 
-    // Cerrar también con ESC o clic en el backdrop
     const onKey = (e) => {
         if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -923,7 +887,7 @@ function victory() {
         </div>
         <p style="color:var(--gray);font-size:.85rem;margin-bottom:1rem;">
             Gracias por jugar 🎮<br>
-            ¿Hablamos? <a href="mailto:tu@email.com" style="color:var(--cyan);">tu@email.com</a>
+            ¿Hablamos? <a href="mailto:nicotalensfresquet@gmail.com" style="color:var(--cyan);">nicotalensfresquet@gmail.com</a>
         </p>
         <button class="modal__btn" id="againBtn">JUGAR DE NUEVO</button>
         <button class="modal__btn" id="menuBtn" style="border-color:var(--gray);color:var(--gray);margin-top:.5rem;">MENÚ</button>
