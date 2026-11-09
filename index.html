@@ -2,50 +2,102 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio digital — Test inicial">
-    <title>~/portfolio — Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Debug Rush — Portafolio arcade en ASCII">
+    <title>Debug Rush 🚀</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
 
-    <main class="container">
-        <div class="terminal">
-            <div class="terminal__bar">
-                <span class="dot dot--red"></span>
-                <span class="dot dot--yellow"></span>
-                <span class="dot dot--green"></span>
-                <span class="terminal__title">visitor@portfolio: ~ — bash</span>
+    <!-- ==================== MENU ==================== -->
+    <div class="screen screen--menu active" id="menuScreen">
+        <div class="menu__scanlines" aria-hidden="true"></div>
+        <div class="menu__content">
+            <pre class="menu__title">
+██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗     ██████╗ ██╗   ██╗███████╗██╗  ██╗
+██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝     ██╔══██╗██║   ██║██╔════╝██║  ██║
+██║  ██║█████╗  ██████╔╝██║   ██║██║  ███╗    ██████╔╝██║   ██║███████╗███████║
+██║  ██║██╔══╝  ██╔══██╗██║   ██║██║   ██║    ██╔══██╗██║   ██║╚════██║██╔══██║
+██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝    ██║  ██║╚██████╔╝███████║██║  ██║
+╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
+</pre>
+            <p class="menu__subtitle">◆ The Portfolio Bug Hunter ◆</p>
+
+            <div class="menu__score">
+                <span class="menu__score-label">HIGH SCORE</span>
+                <span class="menu__score-value" id="highScore">000000</span>
             </div>
 
-            <div class="terminal__body">
-                <p class="line">
-                    <span class="prompt">visitor@portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span> whoami
-                </p>
-                <h1 class="name">Mi portafolio</h1>
+            <div class="menu__buttons">
+                <button class="btn btn--primary" id="playBtn">
+                    <span class="btn__icon">▶</span>
+                    <span class="btn__text">JUGAR</span>
+                </button>
+                <button class="btn btn--secondary" id="sectionsBtn">
+                    <span class="btn__icon">📁</span>
+                    <span class="btn__text">VER SECCIONES</span>
+                </button>
+            </div>
 
-                <p class="line">
-                    <span class="prompt">visitor@portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span> cat estado.txt
-                </p>
-                <p class="status">
-                    <span id="typedText"></span><span class="cursor">▊</span>
-                </p>
+            <p class="menu__controls">
+                <span>← →</span> mover · <span>ESPACIO</span> disparar · <span>ESC</span> salir
+            </p>
+            <p class="menu__controls menu__controls--mobile">
+                Usa los <b>botones táctiles</b> de abajo
+            </p>
+        </div>
+    </div>
 
-                <p class="line">
-                    <span class="prompt">visitor@portfolio</span><span class="sep">:</span><span class="path">~</span><span class="sep">$</span> ./test.sh
-                </p>
-                <button class="btn" id="testBtn">Ejecutar test</button>
-                <p class="output" id="output"></p>
-
-                <p class="joke">// Primera versión. Si funciona, no lo toquéis. 😉</p>
+    <!-- ==================== GAME ==================== -->
+    <div class="screen screen--game" id="gameScreen">
+        <div class="hud">
+            <div class="hud__item">
+                <span class="hud__label">SCORE</span>
+                <span class="hud__value" id="scoreText">0</span>
+            </div>
+            <div class="hud__item hud__item--center">
+                <span class="hud__label">WAVE</span>
+                <span class="hud__value" id="waveText">1/6</span>
+            </div>
+            <div class="hud__item hud__item--right">
+                <span class="hud__label">LIVES</span>
+                <span class="hud__value" id="livesText">❤❤❤</span>
             </div>
         </div>
-    </main>
 
-    <footer class="footer">
-        <p>© 2025 · Test inicial · <a href="https://github.com/nizatf/el-meu-portfolio">GitHub</a></p>
-    </footer>
+        <div class="canvas-wrap">
+            <canvas id="canvas" width="800" height="600"></canvas>
+            <div class="combo" id="combo">COMBO ×1</div>
+        </div>
+
+        <div class="touch-controls" id="touchControls">
+            <button class="touch-btn" data-key="left">◀</button>
+            <button class="touch-btn touch-btn--shoot" data-key="shoot">log()</button>
+            <button class="touch-btn" data-key="right">▶</button>
+        </div>
+
+        <button class="quit-btn" id="quitBtn">× SALIR</button>
+    </div>
+
+    <!-- ==================== CARD OVERLAY ==================== -->
+    <div class="card-overlay" id="cardOverlay"></div>
+
+    <!-- ==================== SECTIONS OVERLAY ==================== -->
+    <div class="sections-overlay" id="sectionsOverlay">
+        <div class="sections">
+            <div class="sections__header">
+                <h2>📁 Secciones del portafolio</h2>
+                <button class="sections__close" id="sectionsClose">×</button>
+            </div>
+            <div class="sections__grid" id="sectionsGrid"></div>
+        </div>
+    </div>
+
+    <!-- ==================== END MODAL ==================== -->
+    <div class="modal" id="endModal">
+        <div class="modal__panel" id="endPanel"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
